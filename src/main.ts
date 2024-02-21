@@ -37,14 +37,14 @@ app.post('/Formulario', async (req, res)=> {
 
 app.get('/listarFormulario',async (req,res) =>{
    try {
-    const usuarios = await firestore.getDocs(firestore.collection(db, 'Formulario'))
+    const formulario = await firestore.getDocs(firestore.collection(db, 'Formulario'))
 
-    const usuariosLista = usuarios.docs.map((doc) => ({
+    const formularioLista = formulario.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
     }))
 
-    res.send(usuariosLista)
+    res.send(formularioLista)
    } catch (e) {
     console.log("Erro ao listar formulario:"  + e)
 
