@@ -37,7 +37,7 @@ app.post('/Formulario', async (req, res)=> {
 
 app.get('/listarFormulario',async (req,res) =>{
    try {
-    const usuarios = await firestore.getDocs(firestore.collection(db, 'formulario'))
+    const usuarios = await firestore.getDocs(firestore.collection(db, 'Formulario'))
 
     const usuariosLista = usuarios.docs.map((doc) => ({
         id: doc.id,
