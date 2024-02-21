@@ -12,7 +12,7 @@ app.get("/", (req, res) =>  {
 
 app.post('/Formulario', async (req, res)=> {
     const nome = req.body.nome 
-    const telefone = req.body.telefone
+    const senha = req.body.senha
     const email = req.body.email
     const descricao = req.body.descricao
 
@@ -21,7 +21,7 @@ app.post('/Formulario', async (req, res)=> {
         (firestore.collection(db, 'Formulario'),
         {
             nome: nome,
-            telefone:telefone,
+            senha:senha,
             email:email,
             descricao: descricao
         })
