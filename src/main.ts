@@ -73,7 +73,7 @@ app.put('/atualizaFormulario/:id', async (req, res)=> {
     } catch (e) {
         console.log('Erro ao atualizar Formulario:' + e)
 
-        res.status(500).send('Erro ao atualizar Formulario:' + e)
+        res.status(500).send('Erro ao atualizar formulario:' + e)
     }
 })
 
