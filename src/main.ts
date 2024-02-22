@@ -77,7 +77,7 @@ app.put('/atualizaFormulario/:id', async (req, res)=> {
     }
 })
 
-app.delete('/deletarFormulario/:id', async (req, res) =>{
+app.delete('/deletaFormulario/:id', async (req, res) =>{
     const id = req.params.id
 
     try {
@@ -85,9 +85,9 @@ app.delete('/deletarFormulario/:id', async (req, res) =>{
 
         res.send('Formulario deletado com sucesso!')
     } catch (e) {
-        console.log('Erro ao deletar formulario: ' +e)
+        console.log('Erro ao deletar Formulario: ' +e)
 
-        res.status(500).send('Erro ao deletar formulario: ' +e)
+        res.status(500).send('Erro ao deletar Formulario: ' +e)
     }
 })
 
